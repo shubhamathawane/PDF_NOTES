@@ -1,0 +1,86 @@
+1. ALTER TABLE Bookhistory ADD Publication VARCHAR(128); --> To add new Column into the Table.
+2. ALTER TABLE Bookhistory DROP Publication;	--> To remove column from table;
+3. DELETE FROM Bookhistory WHERE title='The smile';    -->  To Delete the data from table.
+4. SELECT DISTINCT column_name FROM table_name;    -->
+
+==================================================
+javatpoint.com
+==================================================
+
+AGGREGATE Functions : SQL aggregation functions is used to perfrom calculation
+on multiple row of a single column of a table. it returns single value. 
+
+1) COUNT()
+2) SUM()
+3) AVG()
+4) MAX()
+5) MIN()
+
+==================================================
+
+
+	1. COUNT :  Count the number of rows in database, 
+		   It uses funtion COUNT(*) that return the count fo all rows
+
+		Examples : SELECT COUNT(*) FROM worker;
+		 	 SELECT COUNT(*) FROM Worke WHERE Salary > 20000;
+		 	 SELECT COUNT(DISTINCT column-name) FROM table-name;
+		 	 SELECT Table-name, COUNT(*) FROM Column-name GROUP BY Table-name;
+
+	2. SUM : 	Sum function is used to calculate the sum of all selected 
+		columns. It work on numberic fields only.
+
+		Syntax : SUM();
+
+		Examples :  	SELECT SUM(Salary) FROM Worker;
+			SELECT SUM(SALARY) FROM Worker WHERE Worker_id<5;
++-------------+
+| SUM(SALARY) |
++-------------+
+|      980000 |
++-------------+
+
+	3.AVG: 	The AVG function is used to calculate the average value 
+		 of the numeric type. AVG function return the average of	
+		all non-null values.
+
+		Syntax: AVG()
+		Example : SELECT AVG(SALARY) FROM Worker;
++-------------+
+| AVG(SALARY) |
++-------------+
+| 230625.0000 |
++-------------+
+
+
+	4. MAX : 	Max function is used to find the maximum value of a 		
+		certain colum. This function determines the largest value
+ 		of all selected values of a column.
+
+		Syntex: MAX()
+		
+		Example : SELECT MAX(SALARY) FROM Worker;
++-------------+
+| MAX(SALARY) |
++-------------+
+|      500000 |
++-------------+
+		
+	5 MIN: 	MIN function is used to find the minimum value of a 
+		certain column. This functions deternmines the smallest
+		value fo all selected values of a column.
+
+		Syntex: MIN() or MIN([ALL|DISTINCT] Expression)
+
+		Example : SELECT MIN(SALARY) FROM Worker; 
++-------------+
+| MIN(SALARY) |
++-------------+
+|       75000 |
++-------------+
+
+==================================================
+Join Operations : - 
+
+SELECT Student.name, StudentCourse.Course_id FROM Student RIGHT JOIN StudentCourse ON StudentCourse.ROLL_NO = Student.ROLL_NO;
+
