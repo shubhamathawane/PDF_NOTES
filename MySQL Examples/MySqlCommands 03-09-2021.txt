@@ -1,0 +1,38 @@
+1. ALTER TABLE table-name RENAME COLUMN old-col-name TO new-col-NAME --> Update Coulumn name
+2. ALTER TABLE table-name ADD new_Column_name Data_type();  -->  To add new column to table
+3. DELETE FROM Bookhistory WHERE year=2014; --> To Delete the data.
+4. REMOVE 
+5. SELECT DISTINCT(year) FROM Bookhistory; --> To get all unique values from column.
+
+============================================================
+
+6. SELECT * FROM Bookhistory WHERE Book_Type REGEXP"^s"; --> Get all names starting from "s";
++-----------+----------+-----------+------+-----------+-------+
+| Publisher | title    | Book_Type | year | Book_Code | Extra |
++-----------+----------+-----------+------+-----------+-------+
+| Adam Slov | Big Bang | space     | 2004 | 1332      | NULL  |
++-----------+----------+-----------+------+-----------+-------+
+
+7. SELECT SUBSTR(title,1,5) FROM Bookhistory;
++-------------------+
+| SUBSTR(title,1,5) |
++-------------------+
+| Big B             |
+| The P             |
+| Grids             |
++-------------------+
+
+============================================================
+
+8. SELECT UPPER(column_name) FROM table_name; 
+	SELECT UPPER(name) FROM Worker;  --> To get row in uppercase
+
+9. SELECT * FROM Bookhistory WHERE title IN('Big Bang','Grids');
++-----------+----------+-------------+------+-----------+-------+
+| Publisher | title    | Book_Type   | year | Book_Code | Extra |
++-----------+----------+-------------+------+-----------+-------+
+| Adam Slov | Big Bang | space       | 2004 | 1332      | NULL  |
+| Yamaha    | Grids    | User-Manual | 2018 | 2343      | Yes   |
++-----------+----------+-------------+------+-----------+-------+
+
+============================================================
